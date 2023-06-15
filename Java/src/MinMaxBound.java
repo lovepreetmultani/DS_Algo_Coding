@@ -1,5 +1,5 @@
 
-public class Coding1 {
+public class MinMaxBound {
 
 	public static void main(String[] args) {
 		  int max_bound=Integer.MAX_VALUE;
