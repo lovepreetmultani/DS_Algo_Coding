@@ -1,18 +1,11 @@
+def reverse_words(s):
+    
+    words = s.split()
 
-def reverseVowels(str1):
-	vowels = ""
-	for char in str1:
-		if char in "aeiouAEIOU":
-			vowels += char
-	result_string = ""
-	for char in str1:
-		if char in "aeiouAEIOU":
-			result_string += vowels[-1]
-			vowels = vowels[:-1]
-		else:
-			result_string += char
-	return result_string
+    reverse_sentence = ' '.join(reversed(words)).strip()
+ 
+    return reverse_sentence
 
-print(reverseVowels("hello"))
-print(reverseVowels("leetcode"))
-
+string = "a good   example"
+reversed_string = reverse_words(string)
+print(reversed_string) 
