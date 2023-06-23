@@ -1,0 +1,25 @@
+""" self represents an instance of the class, so when we assign a variable as
+specifying the self argument in the method's definition solves the error.
+If you don't use the self argument, declare a static method """
+
+class Solution:
+    @staticmethod
+    def find_difference_using_set(nums1, nums2):
+        nums1=set(nums1)
+        nums2=set(nums2)
+        difference = [[],[]]
+        for item in nums1:
+            if item not in nums2:
+                difference[0].append(item)
+        for item in nums2:
+            if item not in nums1:
+                difference[1].append(item)
+
+        return list(difference)
+    
+
+ob1 = Solution()
+nums1=[1,2,3]
+nums2=[2,4,6]
+result=ob1.find_difference_using_set(nums1,nums2)
+print(result)
