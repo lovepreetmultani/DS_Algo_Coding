@@ -7,14 +7,13 @@ class Solution:
             else:
                 subString=""
                 while stack[-1]!="[":
-                    subString+=stack.pop()
+                    subString=stack.pop() + subString
                 stack.pop() #to remove open bracket
 
                 index=""
                 while stack and stack[-1].isdigit():
-                    index+=stack.pop()
-                
-                stack.append(int(index) * subString)
+                    index=stack.pop() + index
+                stack.append(int(index[::-1]) * subString)
 
         return "".join(stack)
 
