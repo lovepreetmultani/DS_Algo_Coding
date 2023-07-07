@@ -7,29 +7,31 @@ class TreeNode():
         self.val = key
 
 def pathSum(root: Optional[TreeNode], targetSum: int) -> int:
-    currVal=0
-    def dfs(node):
-            if not node:
-                return 0
-            count =0
-            currVal+= root.val
-            if currVal== targetSum:
-                 count+=1
-            dfs(node.left)
-            dfs(node.right)
-            return count            
         
-    return dfs(root)
+        def checkPath(root,targetSum):
+            if not root:
+                return 0
+            count=0
+            if root.val == targetSum:
+                count+=1
+            count+=pathSum(root.left, targetSum-root.val)
+            count+=pathSum(root.right,targetSum-root.val)
+            return count
+        
+        if not root:
+             return 0
+        return pathSum(root.left,targetSum) + checkPath(root,targetSum) + pathSum(root.right,targetSum)
 
 root = TreeNode(10)
-root.left      = TreeNode(5)
-root.right     = TreeNode(-3)
+root.left = TreeNode(5)
+root.right = TreeNode(-3)
+root.left.left = TreeNode(3)
+root.left.right = TreeNode(2)
 root.right.right = TreeNode(11)
-root.left.left  = TreeNode(3)
-root.left.right  = TreeNode(2)
+root.left.left.right = TreeNode(-2)
 root.left.right.right = TreeNode(1)
 root.left.left.left = TreeNode(3)
-root.left.left.right = TreeNode(-2)
 
-targetSum=3
-print ("Count of binary tree is:",pathSum(root,targetSum))
+targetSum = 8
+
+print(pathSum(root, targetSum))
