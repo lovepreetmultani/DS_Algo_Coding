@@ -6,7 +6,6 @@ class TreeNode():
         self.val = key
 
 def goodNodes(root: TreeNode) -> int:
-        count = 0
         def dfs(node, maxVal):
             if not node:
                 return 0
