@@ -1,7 +1,7 @@
 # Data Structures and Algorithms
 This repository utilizes various data structures and algorithms to efficiently handle and process data. The following data structures and algorithms are implemented:
 
-Array: Used for storing and accessing data in a contiguous block of memory.
+**Array**: Used for storing and accessing data in a contiguous block of memory.
 
 Linked List: Implemented as a dynamic data structure for efficient insertion and deletion operations.
 
