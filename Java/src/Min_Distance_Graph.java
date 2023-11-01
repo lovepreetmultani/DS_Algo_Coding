@@ -1,3 +1,5 @@
+package src;
+
 import java.util.*;
 
 class Min_Distance_Graph {
@@ -33,7 +35,7 @@ class Min_Distance_Graph {
         Arrays.fill(distance, Integer.MAX_VALUE);
         distance[src] = 0;
 
-        PriorityQueue<Integer> pq = new PriorityQueue<>(Comparator.comparingInt(distance::apply));
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
         pq.add(src);
 
         while (!pq.isEmpty()) {
@@ -69,26 +71,27 @@ class Min_Distance_Graph {
         Collections.reverse(shortestPath);
         return shortestPath;
     }
-}
 
-public class Main {
-    public static void main(String[] args) {
-        int V = 5; // Number of delivery points (nodes)
-        Min_Distance_Graph graph = new Min_Distance_Graph(V);
 
-        // Add edges and distances between delivery points
-        graph.addEdge(0, 1, 10);
-        graph.addEdge(0, 2, 15);
-        graph.addEdge(1, 2, 10);
-        graph.addEdge(1, 3, 12);
-        graph.addEdge(2, 4, 10);
-        graph.addEdge(3, 4, 5);
+    public class Main {
+        public static void main(String[] args) {
+            int V = 5; // Number of delivery points (nodes)
+            Min_Distance_Graph graph = new Min_Distance_Graph(V);
 
-        int source = 0; // Starting delivery point
-        int destination = 4; // Destination delivery point
+            // Add edges and distances between delivery points
+            graph.addEdge(0, 1, 10);
+            graph.addEdge(0, 2, 15);
+            graph.addEdge(1, 2, 10);
+            graph.addEdge(1, 3, 12);
+            graph.addEdge(2, 4, 10);
+            graph.addEdge(3, 4, 5);
 
-        List<Integer> shortestPath = graph.findShortestPath(source, destination);
+            int source = 0; // Starting delivery point
+            int destination = 4; // Destination delivery point
 
-        System.out.println("Shortest Path: " + shortestPath);
+            List<Integer> shortestPath = graph.findShortestPath(source, destination);
+
+            System.out.println("Shortest Path: " + shortestPath);
+        }
     }
 }
