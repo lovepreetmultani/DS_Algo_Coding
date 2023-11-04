@@ -28,12 +28,7 @@ public class SockPairs {
             }
 
            for(int j: mapInput.values()){
-                if(j>1){
-                    if(j%2==0){
-                        countPairs++;
-                    }
-                    countPairs++;
-                }
+               countPairs += j / 2;
             }
 
 
