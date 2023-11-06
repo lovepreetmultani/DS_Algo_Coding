@@ -10,11 +10,11 @@ public class ValidSudoku {
         HashSet<String> hs = new HashSet<>();
         for(int i =0;i<9;i++){
             for(int j=0;j<9;j++){
-                char number = board[i][j];
-                if(number!='.'){
-                    if(!hs.add(number + "in row"+ i)||
-                        !hs.add(number + "in column"+ j)||
-                          !hs.add(number +"found sub box"+ i/3 + "-"+j/3)){
+                char current_value = board[i][j];
+                if(current_value!='.'){
+                    if(!hs.add(current_value + "in row"+ i)||
+                        !hs.add(current_value + "in column"+ j)||
+                          !hs.add(current_value +"found sub box"+ i/3 + "-"+j/3)){
                         return false;
                     }
                 }
