@@ -3,37 +3,38 @@ package src.Interview_practice;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.net.URI;
+import java.net.URISyntaxException;
 
-public class UniqueUrls {
 
-    /**
-     * This function counts how many unique normalized valid URLs were passed to the function
-     *
-     * @param urls List of URLs
-     * @return Number of unique normalized valid URLs
-     */
-    public int countUniqueUrls(List<String> urls) {
-        Set<String> uniqueUrls = new HashSet<>();
+    public class UniqueUrls {
 
-        for (String url : urls) {
-            String normalizedUrl = normalizeUrl(url);
-            uniqueUrls.add(normalizedUrl);
+        /**
+         * This function counts how many unique normalized valid URLs were passed to the function.
+         *
+         * @param urls List of URLs
+         * @return Count of unique normalized URLs
+         */
+        public static int countUniqueUrls(List<String> urls) {
+            Set<String> uniqueUrls = new HashSet<>();
+
+            for (String urlString : urls) {
+                try {
+                    // Normalize the URL by removing the trailing slash and considering query parameters
+                    URI uri = new URI(urlString);
+                    String normalizedUrl = new URI(uri.getScheme(), uri.getAuthority(), uri.getPath(), null, null).toString();
+                    if(normalizedUrl.endsWith("/") || normalizedUrl.endsWith("?")) {
+                        normalizedUrl=normalizedUrl.replaceAll("[/?]$", "");
+                    }
+                    uniqueUrls.add(normalizedUrl);
+                } catch (URISyntaxException e) {
+                    // Handle invalid URLs
+                    e.printStackTrace();
+                }
+            }
+            // Return the count of unique normalized URLs
+            return uniqueUrls.size();
         }
-
-        return uniqueUrls.size();
-    }
-
-    /**
-     * Normalize a URL based on the URL normalization rules.
-     *
-     * @param url Input URL
-     * @return Normalized URL
-     */
-    private String normalizeUrl(String url) {
-        // Implement URL normalization logic here
-        // For simplicity, let's consider two URLs equal if they are the same after removing trailing slashes
-        return url.replaceAll("[/?]$", "");
-    }
 
     public static void main(String[] args) {
         UniqueUrls urlCounter = new UniqueUrls();
@@ -54,3 +55,4 @@ public class UniqueUrls {
         System.out.println("Output: " + result3);
     }
 }
+
