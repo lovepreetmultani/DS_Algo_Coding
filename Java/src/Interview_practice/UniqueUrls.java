@@ -3,16 +3,8 @@ package src.Interview_practice;
 import java.util.*;
 import java.net.URI;
 import java.net.URISyntaxException;
-
-
     public class UniqueUrls {
 
-        /**
-         * This function counts how many unique normalized valid URLs were passed to the function.
-         *
-         * @param urls List of URLs
-         * @return Count of unique normalized URLs
-         */
         public static int countUniqueUrls(List<String> urls) {
             Set<String> uniqueUrls = new HashSet<>();
 
@@ -22,12 +14,11 @@ import java.net.URISyntaxException;
                     URI uri = new URI(urlString);
                     String normalizedUrl = new URI(uri.getScheme(), uri.getAuthority(), uri.getPath(), null, null).toString();
                     if(normalizedUrl.endsWith("/") || normalizedUrl.endsWith("?")) {
-                        normalizedUrl=normalizedUrl.replaceAll("[/?]$", "");
+                        normalizedUrl = normalizedUrl.substring( 0, normalizedUrl.length() - 1 );
                     }
                     uniqueUrls.add(normalizedUrl);
                 } catch (URISyntaxException e) {
-                    // Handle invalid URLs
-                    e.printStackTrace();
+                    throw new IllegalArgumentException( "not a valid URI" );
                 }
             }
             // Return the count of unique normalized URLs
@@ -41,7 +32,7 @@ import java.net.URISyntaxException;
                 try {
                     // Normalize the URL by removing the trailing slash and considering query parameters
                     URI uri = new URI(urlString);
-                    String normalizedUrl = new URI(uri.getScheme(), uri.getAuthority(), uri.getPath(), null, null).toString();
+                    String normalizedUrl = new URI(uri.getScheme(), uri.getAuthority(), uri.getPath(), null,null).toString();
 
                     // Extract the top-level domain
                     String[] domainParts = normalizedUrl.split("\\.");
@@ -52,11 +43,9 @@ import java.net.URISyntaxException;
                         counts.put(topLevelDomain, counts.getOrDefault(topLevelDomain, 0) + 1);
                     }
                 } catch (URISyntaxException e) {
-                    // Handle invalid URLs
-                    e.printStackTrace();
+                    throw new IllegalArgumentException( "not a valid URI" );
                 }
             }
-
             // Return the map containing counts per top-level domain
             return counts;
         }
@@ -64,7 +53,6 @@ import java.net.URISyntaxException;
     public static void main(String[] args) {
         UniqueUrls urlCounter = new UniqueUrls();
         // Example usage
-
         List<String> inputUrls = List.of("https://example.com");
         List<String> inputUrls1 = List.of("https://example.com", "https://example.com/");
         List<String> inputUrls2 = List.of("https://example.com", "http://example.com");
