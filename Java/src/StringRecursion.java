@@ -10,7 +10,7 @@ class StringRecursion {
     void stringToReverse(String str) {
         if(str.length()<1 || str==null)
         {
-            System.out.println("String to reverse is empty");
+            System.out.println("String cannot be null");
         }
         stringToReverse(str.substring(0,str.length()-1));
     }
