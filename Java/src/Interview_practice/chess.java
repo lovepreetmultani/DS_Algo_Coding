@@ -15,6 +15,7 @@ public class chess {
         char endColumn = (char) ('a' + endColumnIndex);
         
 		String endPosition = endRow + String.valueOf(endColumn);
+        System.out.println("The end position to return is: " + endPosition);
 		return endPosition;
 	}
 
