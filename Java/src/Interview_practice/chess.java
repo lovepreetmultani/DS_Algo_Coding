@@ -26,7 +26,6 @@ public class chess {
         int columns = 2;
         
         String endPosition = obj.findEndPosition(startPosition, rows, columns);
-        
         System.out.println("The end position is: " + endPosition);
     }
 
