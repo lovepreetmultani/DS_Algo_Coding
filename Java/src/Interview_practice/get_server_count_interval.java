@@ -1,3 +1,5 @@
+package src.Interview_practice;
+
 import java.util.*;
 
 public class get_server_count_interval {
@@ -34,7 +36,7 @@ public class get_server_count_interval {
                 Arrays.asList(2, 6),
                 Arrays.asList(6, 3)
         );
-        List<Integer> query = Arrays.asList(3, 2, 6);
+        List<Integer> query = List.of(3,2,6);
 
         List<Integer> result = getStaleServerCount(n, log_data, query, x);
         System.out.println(result);
