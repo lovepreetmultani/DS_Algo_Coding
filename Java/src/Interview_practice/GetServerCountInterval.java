@@ -2,7 +2,7 @@ package src.Interview_practice;
 
 import java.util.*;
 
-public class get_server_count_interval {
+public class GetServerCountInterval {
 
     public static List<Integer> getStaleServerCount(int n, List<List<Integer>> log_data, List<Integer> query, int x) {
         List<Integer> result = new ArrayList<>();

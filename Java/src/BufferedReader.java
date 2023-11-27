@@ -1,10 +1,10 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.*;
-public class bufferedReader {
+public class BufferedReader {
         public static void main(String args[] ) throws Exception {
             //BufferedReader
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            java.io.BufferedReader br = new java.io.BufferedReader(new InputStreamReader(System.in));
             System.out.println("please enter the size of array");
             int size = Integer.parseInt(br.readLine());
 

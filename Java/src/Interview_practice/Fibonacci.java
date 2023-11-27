@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class fibonacci {
+public class Fibonacci {
 
     public static List<Integer> fibonacci(int n){
         List<Integer> list = new ArrayList<>();

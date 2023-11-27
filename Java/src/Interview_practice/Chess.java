@@ -1,5 +1,5 @@
 
-public class chess {
+public class Chess {
 
     public String findEndPosition(String startPosition, int rows, int columns) {
 	
@@ -20,7 +20,7 @@ public class chess {
 	}
 
     public static void main(String[] args){
-        chess obj = new chess();
+        Chess obj = new Chess();
         String startPosition = "2b";
         int rows = 3;
         int columns = 2;

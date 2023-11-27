@@ -2,7 +2,7 @@ package src;
 
 import java.util.*;
 
-class Min_Distance_Graph {
+class MinDistanceGraph {
     private int V; // Number of vertices
     private List<List<Edge>> adj; // Adjacency list
 
@@ -17,7 +17,7 @@ class Min_Distance_Graph {
         }
     }
 
-    Min_Distance_Graph(int V) {
+    MinDistanceGraph(int V) {
         this.V = V;
         adj = new ArrayList<>(V);
         for (int i = 0; i < V; i++) {
@@ -76,7 +76,7 @@ class Min_Distance_Graph {
     public class Main {
         public static void main(String[] args) {
             int V = 5; // Number of delivery points (nodes)
-            Min_Distance_Graph graph = new Min_Distance_Graph(V);
+            MinDistanceGraph graph = new MinDistanceGraph(V);
 
             // Add edges and distances between delivery points
             graph.addEdge(0, 1, 10);

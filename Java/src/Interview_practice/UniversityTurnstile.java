@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class university_turnstile {
+public class UniversityTurnstile {
 
     public static List<Integer> getTimes(List<Integer> time, List<Integer> direction) {
         int n = time.size();

@@ -3,7 +3,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class transitive {
+public class Transitive {
     public static void main(String[] args) {
         char[][] buys = {
                 {'A', 'B'},

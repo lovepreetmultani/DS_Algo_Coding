@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class labyrinth_grid {
+public class LabyrinthGrid {
     public static void main(String[] args) {
         int rows = 5, cols = 5;
         int[][] grid = {

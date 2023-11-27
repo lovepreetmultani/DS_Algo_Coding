@@ -1,6 +1,6 @@
 package src;
 
-public class MissingfirstPositive {
+public class MissingFirstPositive {
 
     public static void main(String s[]){
         int[] num = {1,2,0};

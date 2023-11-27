@@ -2,7 +2,7 @@ package src;
 
 import java.util.HashMap;
 
-public class characters_frequency {
+public class CharactersFrequency {
     public static void main(String s[]) {
         String str = "hello java";
         HashMap<Character, Integer> hm = new HashMap<>();

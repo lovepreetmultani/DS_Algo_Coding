@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-public class countFrequencyCharacters {
+public class CountFrequencyCharacters {
 
     public static void main(String s[]){
         String str="hello world";
