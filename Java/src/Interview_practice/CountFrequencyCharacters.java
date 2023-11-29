@@ -14,11 +14,10 @@ public class CountFrequencyCharacters {
         if(str.length()<1){
             return "No element";
         }
-
         str=str.replaceAll("[^a-z]","");
         System.out.println("string after removing un-necessary characters now is:"+str);
-        HashMap<Character, Integer> repeatedChars= new HashMap<Character,Integer>();
 
+        HashMap<Character, Integer> repeatedChars= new HashMap<Character,Integer>();
 
         for(int i =0;i<str.length();i++){
 
