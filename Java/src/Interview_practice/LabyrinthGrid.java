@@ -33,6 +33,7 @@ public class LabyrinthGrid {
                 int newX = x + dir[0], newY = y + dir[1];
 
                 if (newX >= 0 && newX < rows && newY >= 0 && newY < cols && !visited[newX][newY] && grid[newX][newY] == 0) {
+                    //to check within the range of box
                     queue.add(new int[]{newX, newY, distance + 1});
                     visited[newX][newY] = true;
                 }

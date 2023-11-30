@@ -1,4 +1,5 @@
-import java.io.BufferedReader;
+package src;
+
 import java.io.InputStreamReader;
 import java.util.*;
 public class BufferedReader {
