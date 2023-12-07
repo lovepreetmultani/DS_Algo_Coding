@@ -1,8 +1,5 @@
 package src;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 public class GsonProgram {
 
     public static void main(String[] args) {
@@ -11,7 +8,6 @@ public class GsonProgram {
 
         // Parse the JSON response
         JsonNode rootNode = parseJson(apiResponse);
-
         // Access nested data or check for a specific field
         if (rootNode != null) {
             String userName = getNodeText(rootNode, "user.name");
