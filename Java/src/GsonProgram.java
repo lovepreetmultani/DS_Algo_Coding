@@ -13,8 +13,7 @@ public class GsonProgram {
             String userName = getNodeText(rootNode, "user.name");
             String city = getNodeText(rootNode, "user.address.city");
 
-            System.out.println("User Name: " + userName);
-            System.out.println("City: " + city);
+            System.out.println("User Name and city: " + userName+ city);
 
             // Check for a specific field
             boolean hasZip = hasNode(rootNode, "user.address.zip");
