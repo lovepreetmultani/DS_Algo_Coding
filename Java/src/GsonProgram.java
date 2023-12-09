@@ -18,6 +18,7 @@ public class GsonProgram {
             // Check for a specific field
             boolean hasZip = hasNode(rootNode, "user.address.zip");
             System.out.println("Has Zip Code: " + hasZip);
+
         }
     }
 
