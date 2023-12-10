@@ -5,7 +5,6 @@ public class GsonProgram {
     public static void main(String[] args) {
         // Simulating API response (replace this with your actual API call)
         String apiResponse = "{ \"user\": { \"id\": 1, \"name\": \"John\", \"address\": { \"city\": \"New York\", \"zip\": \"10001\" } } }";
-
         // Parse the JSON response
         JsonNode rootNode = parseJson(apiResponse);
         // Access nested data or check for a specific field
