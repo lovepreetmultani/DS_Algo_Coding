@@ -11,7 +11,7 @@ public class CountFrequencyCharacters {
     }
 
     private static String firstRepeatingCharacter(String str) {
-        if(str.length()<1){
+        if(str.length()<1 || str==null){
             return "No element";
         }
         str=str.replaceAll("[^a-z]","");
