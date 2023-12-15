@@ -34,7 +34,6 @@ public class CountFrequencyCharacters {
             System.out.println("values are"+count+"   "+entry.getKey());
             if(count>1){
                 System.out.println("element is:"+entry.getKey());
-               // break;
             }
         }
         return "Not found";
