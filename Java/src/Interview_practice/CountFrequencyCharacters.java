@@ -30,7 +30,6 @@ public class CountFrequencyCharacters {
 
         for(Map.Entry<Character, Integer> entry: repeatedChars.entrySet()){
             int count =entry.getValue();
-
             System.out.println("values are"+count+"   "+entry.getKey());
             if(count>1){
                 System.out.println("element is:"+entry.getKey());
