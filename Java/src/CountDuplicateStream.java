@@ -15,11 +15,9 @@ public class CountDuplicateStream {
 
     private static int countDuplicates(String str) {
         str=str.toLowerCase();
-
         Map<Character, Long> hm=str.chars()
                 .mapToObj(c -> (char) c)
                 .collect(groupingBy(identity(), counting()));
-
 
         return (int) hm.values().stream()
                 .filter(count -> count > 1)
