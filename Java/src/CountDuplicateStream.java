@@ -12,13 +12,11 @@ public class CountDuplicateStream {
         String str  = "aabbcde";
         System.out.println("Final String and its count is: " + countDuplicates(str));
     }
-
     private static int countDuplicates(String str) {
         str=str.toLowerCase();
         Map<Character, Long> hm=str.chars()
                 .mapToObj(c -> (char) c)
                 .collect(groupingBy(identity(), counting()));
-
         return (int) hm.values().stream()
                 .filter(count -> count > 1)
                 .count();
