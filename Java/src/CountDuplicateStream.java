@@ -10,7 +10,7 @@ public class CountDuplicateStream {
 
     public static void main(String[] args) {
         String str  = "aabbcde";
-        System.out.println("Final String and its count is: " + countDuplicates(str));
+        System.out.println("Final String and the count is: " + countDuplicates(str));
     }
     private static int countDuplicates(String str) {
         str=str.toLowerCase();
