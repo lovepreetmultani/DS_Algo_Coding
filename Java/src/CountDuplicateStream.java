@@ -9,7 +9,7 @@ import static java.util.stream.Collectors.counting;
 public class CountDuplicateStream {
 
     public static void main(String[] args) {
-        String str  = "abcbd";
+        String str  = "jhjhjhjjhjhjh";
         System.out.println("Final String and the count is: " + countDuplicates(str));
     }
     private static int countDuplicates(String str) {
