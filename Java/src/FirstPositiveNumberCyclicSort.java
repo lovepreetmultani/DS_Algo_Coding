@@ -21,7 +21,7 @@ class FirstPositiveNumberCyclicSort {
         return n+1;
     }
     public static void main(String s[]){
-        int[] num = {1,2,0,4,9,1};
+        int[] num = {1,2,0,4,9,3,2,1,2,1};
         System.out.println("missing value is " + missingFirstPositiveCyclicSort(num));
     }
 }
