@@ -24,7 +24,7 @@ public class Smooth1 {
 
     public static void main(String[] args) {
         // Example usage
-        double[] input = {1, 4, 2, 5, 3, 6, 4, 8, 5, 9, 7, 10};
+        double[] input = {1, 4, 2, 5, 3, 6, 4, 8, 5,6,6,3,4 9, 7, 10};
         int h = 5;
         long startTime = System.nanoTime();// Smoothing window size
         double[] smoothed = smooth(input, h);  // Call the smoothing function
