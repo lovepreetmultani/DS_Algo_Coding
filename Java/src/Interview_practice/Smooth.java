@@ -9,21 +9,16 @@ public class Smooth {
         double[] out = new double[N];
         double[] prefixSum = new double[N + 1];
 
-        // Calculate prefix sum
         for (int i = 0; i < N; i++) {
             prefixSum[i + 1] = prefixSum[i] + in[i];
         }
 
-        // Calculate moving average using dynamic programming
         for (int i = 0; i < N; i++) {
             int left = Math.max(0, i - h);
             int right = Math.min(N - 1, i + h);
             int windowSize = right - left + 1;
-
             out[i] = (prefixSum[right + 1] - prefixSum[left]) / windowSize;
-
         }
-
         return out;
     }
 
