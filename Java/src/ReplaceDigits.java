@@ -6,7 +6,6 @@ public class ReplaceDigits {
         String str="a1b2c3d4e";
         System.out.println("Final String is: " + replaceDigits(str));
     }
-
     private static String replaceDigits(String str) {
         char[] charArray = str.toCharArray();
         for(int i =1;i<charArray.length;i=i+2){

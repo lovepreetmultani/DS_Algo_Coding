@@ -19,7 +19,6 @@ public class Pangram {
             System.out.println("The input is not a pangram. Missing characters: " + missingChars);
         }
     }
-
     private static String getMissingCharacters(Set<Character> input, String s) {
         StringBuilder sb = new StringBuilder();
         for(char ch='a';ch<='z';ch++){
@@ -29,7 +28,6 @@ public class Pangram {
         }
         return sb.toString();
     }
-
     private static boolean isPangram(Set<Character> input) {
 
         return input.size()==26;
