@@ -16,7 +16,7 @@ public class Pangram {
             System.out.println("The input is a pangram.");
         } else {
             String missingChars = getMissingCharacters(presentElements,input);
-            System.out.println("The input is not a pangram. Missing characters: " + missingChars);
+            System.out.println("The input is not a pangram. Missing characters are :" + missingChars);
         }
     }
     private static String getMissingCharacters(Set<Character> input, String s) {
