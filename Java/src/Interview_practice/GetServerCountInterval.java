@@ -3,16 +3,13 @@ package src.Interview_practice;
 import java.util.*;
 
 public class GetServerCountInterval {
-
     public static List<Integer> getStaleServerCount(int n, List<List<Integer>> log_data, List<Integer> query, int x) {
         List<Integer> result = new ArrayList<>();
 
         for (int q : query) {
             int start = q - x;
             int end = q;
-
             Set<Integer> serversReceivedRequest = new HashSet<>();
-
             for (List<Integer> log : log_data) {
                 int server_id = log.get(0);
                 int time = log.get(1);
@@ -20,13 +17,10 @@ public class GetServerCountInterval {
                     serversReceivedRequest.add(server_id);
                 }
             }
-
             result.add(n - serversReceivedRequest.size());
         }
-
         return result;
     }
-
     public static void main(String[] args) {
         int n = 6;
         int x = 2;
