@@ -23,10 +23,8 @@ import java.net.URISyntaxException;
         }
         public static Map<String, Integer> countUniqueUrlsPerTopLevelDomain(List<String> urls) {
             Map<String, Integer> counts = new HashMap<>();
-
             for (String urlString : urls) {
                 try {
-                    // Normalize the URL by removing the trailing slash and considering query parameters
                     URI uri = new URI(urlString);
                     String normalizedUrl = new URI(uri.getScheme(), uri.getAuthority(), uri.getPath(), null,null).toString();
 
