@@ -16,7 +16,7 @@ import java.net.URISyntaxException;
                     }
                     uniqueUrls.add(normalizedUrl);
                 } catch (URISyntaxException e) {
-                    throw new IllegalArgumentException( "Not a valid URI" );
+                    throw new IllegalArgumentException( "Not a valid URL" );
                 }
             }
             return uniqueUrls.size();
