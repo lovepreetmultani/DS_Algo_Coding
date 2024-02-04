@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.*;
 import java.util.stream.Collectors;
 
-class WordCountCounter_Adaptavist_Test {
+class WordCountCounterAdaptavistTest {
 
     public static Map<String, Integer> countWordsInFile(String filename) throws IOException {
         Map<String, Integer> wordCounter = new HashMap<>();
