@@ -11,6 +11,6 @@ public class MyClass {
 
     public static void main(String[] args) {
         MyClass obj = new MyClass();
-        obj.myMethod(null); // This will call the method with String parameter
+        obj.myMethod(null);
     }
 }
