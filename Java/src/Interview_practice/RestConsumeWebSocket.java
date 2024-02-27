@@ -1,7 +1,6 @@
 package src.Interview_practice;
 
 public class RestConsumeWebSocket {
-    // Example of consuming REST API using RestTemplate
     RestTemplate restTemplate = new RestTemplate();
     ResponseEntity<String> response = restTemplate.getForEntity("http://api.example.com/data", String.class);
     String responseBody = response.getBody();
