@@ -11,5 +11,5 @@ client.execute(URI.create("ws://example.com/socket"), session ->
         .map(WebSocketMessage::getPayloadAsText)
         .log())
         .then())
-        .block(Duration.ofSeconds(10));
+        .block(Duration.ofSeconds(50));
 }
