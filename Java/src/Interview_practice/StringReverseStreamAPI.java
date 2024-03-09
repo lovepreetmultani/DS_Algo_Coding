@@ -1,7 +1,6 @@
 package src.Interview_practice;
 
 import java.util.stream.IntStream;
-
 class StringReverseStreamAPI {
     public static void main(String args[]) {
         IntStream.rangeClosed(2, 100)
