@@ -9,7 +9,7 @@ This repository utilizes various data structures and algorithms to efficiently h
 
 **Queue**: Implemented as a first-in-first-out (FIFO) data structure for efficient enqueue and dequeue operations.
 
-**Binary Search Tree**: Used for efficient searching, insertion, and deletion of elements in a sorted tree structure.
+**Binary Search Tree**: Used for efficient searching,insertion,and deletion of elements in a sorted tree structure.
 
 **Hash Table**: Utilized for fast retrieval and storage of key-value pairs.
 
