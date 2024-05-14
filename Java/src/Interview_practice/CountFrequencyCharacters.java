@@ -2,7 +2,6 @@ package src.Interview_practice;
 
 import java.util.HashMap;
 import java.util.Map;
-
 public class CountFrequencyCharacters {
     public static void main(String s[]){
         String str="hello world";
