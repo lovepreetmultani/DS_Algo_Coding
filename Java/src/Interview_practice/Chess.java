@@ -5,14 +5,12 @@ public class Chess {
 		char startCol=startPosition.charAt(1);
 		int endRow = (startRow + rows) % 8;
         if (endRow == 0){
-			endRow = 8;
-		}
+			endRow = 8;}
         int endColumnIndex = ((startCol - 'a') + columns) % 8;
         char endColumn = (char) ('a' + endColumnIndex);
 		String endPosition = endRow + String.valueOf(endColumn);
         System.out.println("The end position to return is: " + endPosition);
-		return endPosition;
-	}
+		return endPosition;}
     public static void main(String[] args){
         Chess obj = new Chess();
         String startPosition = "2b";
