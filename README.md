@@ -16,5 +16,4 @@ This repository utilizes various data structures and algorithms to efficiently h
 **Sorting Algorithms**: Implemented sorting algorithms such as bubble sort, selection sort, insertion sort, and quicksort.
 
 **Graph Algorithms**: Utilized algorithms like breadth-first search (BFS) and depth-first search (DFS) for traversing and analyzing graphs.
-
 These implemented data structures and algorithms facilitate hands-on practice and problem-solving skills.
