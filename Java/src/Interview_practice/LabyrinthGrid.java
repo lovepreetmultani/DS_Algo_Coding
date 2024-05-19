@@ -14,13 +14,11 @@ public class LabyrinthGrid {
         int shortestPathLength = shortestPath(rows, cols, grid);
         System.out.println("The length of the shortest path is: " + shortestPathLength);
     }
-
     public static int shortestPath(int rows, int cols, int[][] grid) {
         int[][] directions = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}}; // right, down, left, up
         boolean[][] visited = new boolean[rows][cols];
         Queue<int[]> queue = new LinkedList<>();
         queue.add(new int[]{0, 0, 0}); // x, y, distance
-
         while (!queue.isEmpty()) {
             int[] current = queue.poll();
             int x = current[0], y = current[1], distance = current[2];
