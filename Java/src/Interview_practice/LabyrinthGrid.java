@@ -22,11 +22,9 @@ public class LabyrinthGrid {
         while (!queue.isEmpty()) {
             int[] current = queue.poll();
             int x = current[0], y = current[1], distance = current[2];
-
             if (x == rows - 1 && y == cols - 1) {
                 return distance;
             }
-
             for (int[] dir : directions) {
                 int newX = x + dir[0], newY = y + dir[1];
                 if (newX >= 0 && newX < rows && newY >= 0 && newY < cols && !visited[newX][newY] && grid[newX][newY] == 0) {
