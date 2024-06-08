@@ -9,16 +9,16 @@ public class Transitive {
                 {'A', 'B'},
                 {'B', 'C'}
         };
-        int initialCount = 2;
-        int result = transitiveBuysCount(initialCount, buys);
+        var initialCount = 2;
+        var result = transitiveBuysCount(initialCount, buys);
         System.out.println("Transitive buys count: " + result);
     }
     public static int transitiveBuysCount(int initialCount, char[][] buys) {
-        Map<Character, Set<Character>> buyMap = new HashMap<>();
-        for (char[] buy : buys) {
+        var buyMap = new HashMap<Character, Set<Character>>();
+        for (var buy : buys) {
             buyMap.computeIfAbsent(buy[0], k -> new HashSet<>()).add(buy[1]);
         }
-        Set<Character> uniqueBuys = new HashSet<>();
+        var uniqueBuys = new HashSet<Character>();
         dfs('A', buyMap, uniqueBuys, new HashSet<>());
         return uniqueBuys.size()-1;
     }
