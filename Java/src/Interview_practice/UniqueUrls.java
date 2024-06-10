@@ -4,7 +4,6 @@ import java.util.*;
 import java.net.URI;
 import java.net.URISyntaxException;
     public class UniqueUrls {
-
         public static int countUniqueUrls(List<String> urls) {
             Set<String> uniqueUrls = new HashSet<>();
             for (String urlString : urls) {
@@ -27,20 +26,15 @@ import java.net.URISyntaxException;
                 try {
                     URI uri = new URI(urlString);
                     String normalizedUrl = new URI(uri.getScheme(), uri.getAuthority(), uri.getPath(), null,null).toString();
-
-                    // Extract the top-level domain
                     String[] domainParts = normalizedUrl.split("\\.");
                     if (domainParts.length >= 2) {
                         String topLevelDomain = domainParts[domainParts.length - 2] + "." + domainParts[domainParts.length - 1];
-
-                        // Update the count for the top-level domain
                         counts.put(topLevelDomain, counts.getOrDefault(topLevelDomain, 0) + 1);
                     }
                 } catch (URISyntaxException e) {
                     throw new IllegalArgumentException( "not a valid URI" );
                 }
             }
-            // Return the map containing counts per top-level domain
             return counts;
         }
 
