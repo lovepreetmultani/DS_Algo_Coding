@@ -8,7 +8,7 @@ public class MyClass {
         System.out.println("String method called");
     }
     public static void main(String[] args) {
-        MyClass obj = new MyClass();
+        var obj = new MyClass();
         obj.myMethod(null);
     }
 }
