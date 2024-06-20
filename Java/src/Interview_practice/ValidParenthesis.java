@@ -3,7 +3,6 @@ package src.Interview_practice;
 import java.util.Stack;
 
 public class ValidParenthesis {
-
     private static boolean isValid(String str) {
         if (str.length() < 1) {
             return false;
@@ -22,7 +21,6 @@ public class ValidParenthesis {
         }
         return stack.isEmpty();
     }
-
     public static void main(String args[]){
         String str= "[())";
         System.out.println("String is balanced: "+isValid(str));
