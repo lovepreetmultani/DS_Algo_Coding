@@ -23,7 +23,7 @@ public class runLengthEncoding {
     public static void main(String[] args) {
         String str = "aaabbcc";
         String str1 = "aaa";
-        System.out.println("frequency is:"+findFrequency(str));
-        System.out.println("frequency 2 is:"+findFrequency(str1));
+        System.out.println("frequency of string 1 is:"+findFrequency(str));
+        System.out.println("frequency of string 2 is:"+findFrequency(str1));
     }
 }
