@@ -13,10 +13,8 @@ public class Pangram {
             presentElements.add(ch);
         }
         if (isPangram(presentElements)) {
-            System.out.println("The input is a pangram");
         } else {
             String missingChars = getMissingCharacters(presentElements,input);
-            System.out.println("The input is not a pangram. Missing characters are :" + missingChars);
         }
     }
     private static String getMissingCharacters(Set<Character> input, String s) {
@@ -29,7 +27,6 @@ public class Pangram {
         return sb.toString();
     }
     private static boolean isPangram(Set<Character> input) {
-
         return input.size()==26;
     }
 }
