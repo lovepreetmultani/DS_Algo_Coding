@@ -2,7 +2,6 @@ package src;
 
 import java.util.Arrays;
 import java.util.stream.IntStream;
-
 public class MedianOfTwoSortedArrays {
     public static void main(String[] args) {
         int[] nums1 = {1, 3};
@@ -12,10 +11,9 @@ public class MedianOfTwoSortedArrays {
         int[] nums4 = {3, 4};
         System.out.println("Median: " + findMedianSortedArrays(nums3, nums4));
     }
-
     private static double findMedianSortedArrays(int[] nums1, int[] nums2) {
         var mergedArray = IntStream.concat(Arrays.stream(nums1),Arrays.stream(nums2)).sorted().toArray();
-        int length = mergedArray.length;
+        var length = mergedArray.length;
         if(length%2==1){
             return mergedArray[length/2];
         }else{
