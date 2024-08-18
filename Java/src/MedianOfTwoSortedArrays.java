@@ -6,10 +6,10 @@ public class MedianOfTwoSortedArrays {
     public static void main(String[] args) {
         int[] nums1 = {1, 3};
         int[] nums2 = {2};
-        System.out.println("Median: " + findMedianSortedArrays(nums1, nums2));
+        System.out.println("Median one is: " + findMedianSortedArrays(nums1, nums2));
         int[] nums3 = {1, 2};
         int[] nums4 = {3, 4};
-        System.out.println("Median: " + findMedianSortedArrays(nums3, nums4));
+        System.out.println("Median two is: " + findMedianSortedArrays(nums3, nums4));
     }
     private static double findMedianSortedArrays(int[] nums1, int[] nums2) {
         var mergedArray = IntStream.concat(Arrays.stream(nums1),Arrays.stream(nums2)).sorted().toArray();
