@@ -4,14 +4,11 @@ import java.io.InputStreamReader;
 import java.util.*;
 public class BufferedReader {
         public static void main(String args[] ) throws Exception {
-            //BufferedReader
             java.io.BufferedReader br = new java.io.BufferedReader(new InputStreamReader(System.in));
             System.out.println("please enter the size of array");
             int size = Integer.parseInt(br.readLine());
 
             int[] array = new int[size];
-
-            // Read the array elements
             String input = br.readLine();
             StringTokenizer st = new StringTokenizer(input);
 
