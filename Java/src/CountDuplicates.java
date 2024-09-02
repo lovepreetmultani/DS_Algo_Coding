@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class CountDuplicates {
 
     public static void main(String[] args) {
-        String str  = "aabbcde";
+        var str  = "aabbcde";
         System.out.println("duplicate count is: " + countDuplicates(str));
     }
 
@@ -15,14 +15,14 @@ public class CountDuplicates {
         }
         str = str.toLowerCase();
         HashMap<Character,Integer> hm = new HashMap<>();
-        for(char c: str.toCharArray()){
+        for(var c: str.toCharArray()){
             if(Character.isLetter(c) || Character.isDigit(c)){
                 hm.put(c,hm.getOrDefault(c,0)+1);
             }
         }
 
         int duplicateCount=0;
-        for(int count: hm.values()){
+        for(var count: hm.values()){
             if(count>1){
                 duplicateCount++;
             }

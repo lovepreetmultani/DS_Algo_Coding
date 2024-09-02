@@ -10,13 +10,13 @@ public static void main(String s[]){
         if(arr.length<1){
             return -1;
         }
-        int sum=0;
-        int leftsum=0;
-        for(int n:arr){
+        var sum=0;
+        var leftsum=0;
+        for(var n:arr){
             sum+=n;
         }
-        for(int i =0;i<arr.length;i++){
-            int rightsum=sum-leftsum-arr[i];
+        for(var i =0;i<arr.length;i++){
+            var rightsum=sum-leftsum-arr[i];
 
             if(leftsum==rightsum){
                 return i;

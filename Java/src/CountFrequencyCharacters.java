@@ -2,12 +2,10 @@ package src;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 public class CountFrequencyCharacters {
-
     public static void main(String s[]){
-        String str="hello world";
+        var str="hello world";
         System.out.println("count and character:"+firstRepeatingCharacter(str));
     }
 
@@ -20,7 +18,7 @@ public class CountFrequencyCharacters {
         HashMap<Character, Integer> repeatedChars= new HashMap<Character,Integer>();
 
 
-        for(int i =0;i<str.length();i++){
+        for(var i =0;i<str.length();i++){
 
             if(repeatedChars.containsKey(str.charAt(i))){
                 repeatedChars.put(str.charAt(i), repeatedChars.get(str.charAt(i)+1));
