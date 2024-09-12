@@ -16,7 +16,6 @@ public class CharactersFrequency {
                 }
             }
         }
-
         for(var i =0;i<str.length();i++){
             if(str.charAt(i)!=' ' && hm.get(str.charAt(i))!=-1){
                 System.out.println(str.charAt(i)+ "    "+hm.get(str.charAt(i)));
