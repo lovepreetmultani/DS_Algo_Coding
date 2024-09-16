@@ -7,7 +7,6 @@ import java.time.temporal.TemporalAdjusters;
 public class secondFriday {
     public static void main(String s[]){
         var currentDate = LocalDate.now();
-        System.out.println("current date:"+currentDate);
         var firstDayOfMonth = currentDate.plusMonths(1).withDayOfMonth(1);
         var firstFriday = firstDayOfMonth.with(TemporalAdjusters.nextOrSame(DayOfWeek.FRIDAY));
         var secondFriday = firstFriday.plusWeeks(1);

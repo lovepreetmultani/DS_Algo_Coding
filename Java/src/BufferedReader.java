@@ -14,7 +14,7 @@ public class BufferedReader {
                 array[i] = Integer.parseInt(st.nextToken());
             }
                 var minElement = findMinimumElement(array);
-                System.out.println("The minimum element in the array is: " + minElement)
+                System.out.println("The minimum element in the array is: " + minElement);
         }
     public static int findMinimumElement(int[] arr) {
         var minElement = arr[0];

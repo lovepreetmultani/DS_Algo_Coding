@@ -12,7 +12,7 @@ public class CountDuplicates {
             return 0;
         }
         str = str.toLowerCase();
-        HashMap<Character,Integer> hm = new HashMap<>();
+       var hm = new HashMap<Character,Integer>();
         for(var c: str.toCharArray()){
             if(Character.isLetter(c) || Character.isDigit(c)){
                 hm.put(c,hm.getOrDefault(c,0)+1);
