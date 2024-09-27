@@ -5,7 +5,6 @@ import java.util.*;
 public class GetServerCountInterval {
     public static List<Integer> getStaleServerCount(int n, List<List<Integer>> log_data, List<Integer> query, int x) {
         List<Integer> result = new ArrayList<>();
-
         for (int q : query) {
             int start = q - x;
             int end = q;
