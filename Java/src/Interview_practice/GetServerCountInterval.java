@@ -5,13 +5,13 @@ import java.util.*;
 public class GetServerCountInterval {
     public static List<Integer> getStaleServerCount(int n, List<List<Integer>> log_data, List<Integer> query, int x) {
         List<Integer> result = new ArrayList<>();
-        for (int q : query) {
-            int start = q - x;
-            int end = q;
+        for (var q : query) {
+            var start = q - x;
+            var end = q;
             Set<Integer> serversReceivedRequest = new HashSet<>();
             for (List<Integer> log : log_data) {
-                int server_id = log.get(0);
-                int time = log.get(1);
+                var server_id = log.get(0);
+                var time = log.get(1);
                 if (time >= start && time <= end) {
                     serversReceivedRequest.add(server_id);
                 }
