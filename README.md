@@ -1,5 +1,5 @@
-## Data Structures and Algorithms
-This repository utilizes various data structures and algorithms to efficiently handle and process data.The following data structures and algorithms are implemented
+## Data Structures and Algorithm
+This repository utilizes various data structures and algorithms to handle and process data efficiently. The following data structures and algorithms are implemented
 
 **Arrays/String**: Used for storing and accessing data in a contiguous block of memory.
 
